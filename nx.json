@@ -2,5 +2,9 @@
   "installation": {
     "version": "21.4.1"
   },
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "packages"
+  },
   "$schema": "./node_modules/nx/schemas/nx-schema.json"
 }
