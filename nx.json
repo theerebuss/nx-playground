@@ -1,4 +1,5 @@
 {
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "installation": {
     "version": "21.4.1"
   },
@@ -6,8 +7,7 @@
     "appsDir": "apps"
   },
   "release": {
-    "versionPlans": true,
-    "projects": ["apps/*"],
+    "projects": ["apps/api", "apps/app"],
     "projectsRelationship": "independent",
     "releaseTagPattern": "{projectName}@{version}",
     "version": {
@@ -26,8 +26,21 @@
       }
     }
   },
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "plugins": [
+    {
+      "plugin": "@nx/js/typescript",
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        },
+        "build": {
+          "targetName": "build",
+          "configName": "tsconfig.lib.json",
+          "buildDepsName": "build-deps",
+          "watchDepsName": "watch-deps"
+        }
+      }
+    },
     {
       "plugin": "@nxlv/python"
     }
