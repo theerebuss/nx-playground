@@ -1,5 +1,6 @@
 _extends: nx-playground:.github/release-drafter-template.yml
 name-template: "🦖 backend $RESOLVED_VERSION"
-tag-template: "v$RESOLVED_VERSION"
+tag-template: "backend-v$RESOLVED_VERSION"
+tag-prefix: "backend-v"
 include-paths:
   - "apps/backend/"
