@@ -1,0 +1,16 @@
+name: Test deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      custom_message:
+        description: 'Custom message to include in the release'
+        required: false
+        default: ''
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        run: echo "${{ github.event.inputs.custom_message }}"

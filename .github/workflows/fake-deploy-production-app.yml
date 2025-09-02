@@ -1,0 +1,15 @@
+name: PRODUCTION - Fake deploy (app)
+
+on:
+  release:
+    paths:
+      - apps/app/**
+    branches:
+      - main
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        run: echo "Success!"
