@@ -7,7 +7,9 @@
     "appsDir": "apps"
   },
   "release": {
-    "projects": ["apps/*"],
+    "projects": [
+      "apps/*"
+    ],
     "projectsRelationship": "independent",
     "releaseTagPattern": "{projectName}@{version}",
     "version": {
