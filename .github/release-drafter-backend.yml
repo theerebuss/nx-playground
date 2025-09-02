@@ -1,0 +1,85 @@
+name-template: "🦖 backend $RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+include-paths:
+  - "apps/backend"
+change-template: "- $TITLE by @$AUTHOR (#$NUMBER)"
+no-changes-template: "- No changes"
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'Feature'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'Fix'
+  - title: '🛠 Maintenance'
+    labels:
+      - 'Build'
+      - 'CI'
+      - 'Test'
+      - 'Style'
+      - 'Refactor'
+  - title: '❓Misc'
+    labels:
+      - 'Documentation'
+      - 'Chore'
+      - 'Revert'
+autolabeler:
+  - label: 'Feature'
+    title:
+      - '/feat(\(.+\))?!?: .+/'
+  - label: 'Fix'
+    title:
+      - '/fix(\(.+\))?!?: .+/'
+  - label: 'Documentation'
+    title:
+      - '/docs(\(.+\))?!?: .+/'
+  - label: 'Style'
+    title:
+      - '/style(\(.+\))?!?: .+/'
+  - label: 'Refactor'
+    title:
+      - '/refactor(\(.+\))?!?: .+/'
+  - label: 'Performance'
+    title:
+      - '/perf(\(.+\))?!?: .+/'
+  - label: 'Test'
+    title:
+      - '/test(\(.+\))?!?: .+/'
+  - label: 'Build'
+    title:
+      - '/build(\(.+\))?!?: .+/'
+  - label: 'CI'
+    title:
+      - '/ci(\(.+\))?!?: .+/'
+  - label: 'Chore'
+    title:
+      - '/chore(\(.+\))?!?: .+/'
+  - label: 'Revert'
+    title:
+      - '/revert(\(.+\))?!?: .+/'
+  - label: 'Breaking'
+    title:
+      - '/^[a-z]+!: .+/'
+version-resolver:
+  minor:
+    labels:
+      - 'Fix'
+      - 'Performance'
+      - 'Refactor'
+      - 'Style'
+      - 'Breaking'
+      - 'Feature'
+  patch:
+    labels:
+      - 'Documentation'
+      - 'Test'
+      - 'Build'
+      - 'CI'
+      - 'Chore'
+  default: patch
+template: |
+  # What’s Changed 🤩
+  _Please insert human readable changelog based on the raw changelog_
+
+  # Raw changelog 📃
+  $CHANGES

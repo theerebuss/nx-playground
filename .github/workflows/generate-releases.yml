@@ -1,7 +1,4 @@
-name: Generate releases
-
-permissions:
-  contents: read
+name: Generate release draft
 
 on:
   push:
@@ -10,13 +7,15 @@ on:
 
 jobs:
   update_release_draft:
+    timeout-minutes: 2
+    runs-on: ubuntu-latest
     permissions:
       # write permission is required to create a github release
       contents: write
       # write permission is required for autolabeler
+      # otherwise, read permission is required at least
       pull-requests: write
-    runs-on: ubuntu-latest
     steps:
-      - uses: release-drafter/release-drafter@v5
+      - uses: release-drafter/release-drafter@v6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
