@@ -2,5 +2,5 @@ _extends: nx-playground:.github/release-drafter-template.yml
 name-template: "🕵🏻‍♂️ app $RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
 include-paths:
-  - "apps/api"
-  - "apps/app"
+  - "apps/api/"
+  - "apps/app/"
