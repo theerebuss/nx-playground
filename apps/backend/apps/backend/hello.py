@@ -3,4 +3,4 @@
 
 def hello():
     """Return a friendly greeting."""
-    return "Goodbye apps/backend!"
+    return "Hello again apps/backend!"
