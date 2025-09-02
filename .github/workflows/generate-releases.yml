@@ -6,16 +6,21 @@ on:
       - main
 
 jobs:
-  update_release_draft:
-    timeout-minutes: 2
-    runs-on: ubuntu-latest
-    permissions:
-      # write permission is required to create a github release
-      contents: write
-      # write permission is required for autolabeler
-      # otherwise, read permission is required at least
-      pull-requests: write
+  app:
+    name: '[app] Draft release'
+    runs-on: ubuntu-20.04
     steps:
       - uses: release-drafter/release-drafter@v6
+        with:
+          config-name: release-drafter-app.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  backend:
+    name: '[backend] Draft release'
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: release-drafter/release-drafter@v6
+        with:
+          config-name: release-drafter-backend.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
