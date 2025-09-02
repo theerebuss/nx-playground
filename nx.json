@@ -7,12 +7,12 @@
     "libsDir": "packages"
   },
   "release": {
+    "versionPlans": true,
     "projects": ["apps/*"],
     "projectsRelationship": "independent",
     "releaseTagPattern": "{projectName}@{version}",
     "version": {
-      "conventionalCommits": true,
-      "fallbackCurrentVersionResolver": "disk"
+      "conventionalCommits": true
     },
     "changelog": {
       "projectChangelogs": {
