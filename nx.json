@@ -3,8 +3,7 @@
     "version": "21.4.1"
   },
   "workspaceLayout": {
-    "appsDir": "apps",
-    "libsDir": "packages"
+    "appsDir": "apps"
   },
   "release": {
     "versionPlans": true,

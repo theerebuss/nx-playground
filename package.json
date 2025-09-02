@@ -5,8 +5,7 @@
   "license": "ISC",
   "packageManager": "yarn@1.22.0",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/*"
   ],
   "devDependencies": {
     "@nestjs/schematics": "^11.0.0",
