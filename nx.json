@@ -6,6 +6,27 @@
     "appsDir": "apps",
     "libsDir": "packages"
   },
+  "release": {
+    "projects": ["apps/*"],
+    "projectsRelationship": "independent",
+    "releaseTagPattern": "{projectName}@{version}",
+    "version": {
+      "conventionalCommits": true,
+      "fallbackCurrentVersionResolver": "disk"
+    },
+    "changelog": {
+      "projectChangelogs": {
+        "renderOptions": {
+          "authors": false,
+          "applyUsernameToAuthors": false,
+          "commitReferences": true,
+          "versionTitleDate": true
+        },
+        "createRelease": "github",
+        "file": false
+      }
+    }
+  },
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "plugins": [
     {
