@@ -1,7 +1,14 @@
 name: Test
 
 on:
-  workflow_dispatch:
+  release:
+    branches:
+      - main
+    types: [published]
+  push:
+    tags:
+      - app-*
+      - backend-*
 
 defaults:
   run:
