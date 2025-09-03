@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - main
+  # pull_request event is required only for autolabeler
+  pull_request:
+    types: [ opened, reopened, synchronize ]
 
 permissions:
   # write permission is required to create a github release
